@@ -1,0 +1,23 @@
+.search-wrapper {
+  height: 44px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  background: white;
+  width: auto;
+  padding: 12px 16px;
+}
+.search-input {
+  font-family: "Inter", sans-serif;
+  width: 347px;
+}
+
+.filter {
+  padding: 12px 16px;
+  background: white;
+  display: flex;
+  border-radius: 4px;
+  align-items: center;
+  width: 232px;
+  justify-content: space-between;
+}
