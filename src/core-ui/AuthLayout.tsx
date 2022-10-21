@@ -10,7 +10,6 @@ const AuthLayout = () => {
       <div className="relative w-full h-screen bg-[#f1f5f8] overflow-y-hidden">
         <Topbar />
         <Outlet />
-        <Pagination />
       </div>
     </div>
   );

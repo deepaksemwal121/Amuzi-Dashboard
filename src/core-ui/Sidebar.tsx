@@ -18,11 +18,11 @@ import "./core.css";
 
 const Sidebar = () => {
   return (
-    <div className="h-screen flex flex-col bg-[#141414] w-[220px] pr-[10px]">
+    <div className="h-screen flex flex-col bg-[#141414] w-[280px] pr-[10px]">
       <div className="brand px-[60px] py-[18px] h-[75px] border-b-[1px] border-[#282828]">
         <img src={Logo} width={110} height={50.7} />
       </div>
-      <div className="navigation text-white pl-[42px] pt-[40px]">
+      <div className="navigation text-white px-[42px] pt-[40px]">
         <div className="space-y-[24px] ">
           <div className="flex items-center space-x-[16px] hover:text-[#94DD26]">
             <MdOutlineDashboard size={16} />

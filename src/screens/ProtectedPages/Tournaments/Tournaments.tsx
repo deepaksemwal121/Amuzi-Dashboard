@@ -1,6 +1,6 @@
 import React from "react";
 import Utility from "../../../components/Utility";
-import Header from "./Header";
+import Header from "./HeaderTournament";
 import "./tournament.css";
 import TournamentInfoCard from "./TournamentInfoCard";
 
