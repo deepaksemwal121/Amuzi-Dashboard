@@ -9,7 +9,11 @@ const TeamsCard = () => {
         <input type="checkbox" className="w-[20px] h-[20px] rounded-[4px]" />
       </div>
       <div className="w-4/12 font-medium flex items-center space-x-[24px]">
-        <img src={icon} width={40} height={40} alt="tournament" />
+        <img
+          src={icon}
+          className="w-[50px] h-[50px] rounded-full object-cover"
+          alt="tournament"
+        />
         <p>Real Kashmir FC</p>
       </div>
       <div className="w-1/12 text-[#A6A6A6]">Football </div>

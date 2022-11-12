@@ -4,6 +4,8 @@ import { HiArrowCircleRight } from "react-icons/hi";
 import useTeamStore from "../../../context/store";
 import TeamData from "../../../types/TeamInterface";
 import axios from "axios";
+import { toast } from "react-toastify";
+import { redirect } from "react-router-dom";
 
 const CreateTeam = () => {
   const createTeam = async () => {
@@ -49,10 +51,20 @@ const CreateTeam = () => {
     await axios(config)
       .then(function (response) {
         console.log(JSON.stringify(response.data));
+        cleanTeamFromStore();
       })
       .catch(function (error) {
         console.log(error);
-        alert(error.message);
+        toast(`${error.message}`, {
+          position: "bottom-center",
+          autoClose: 5000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+          theme: "dark",
+        });
       });
   };
 
@@ -67,6 +79,7 @@ const CreateTeam = () => {
     player: state.players,
   }));
   const addPlayer = useTeamStore((state) => state.addPlayer);
+  const cleanTeamFromStore = useTeamStore((state) => state.cleanTeam);
   const [player, setPlayer] = useState({
     name: "",
     designation: "",
@@ -108,7 +121,7 @@ const CreateTeam = () => {
           <img
             src={teamData.mascot.toString()}
             alt="team-img"
-            className="rounded-full w-[80px] h-[80px]"
+            className="rounded-full object-cover w-[80px] h-[80px]"
           />
           <div>
             <h3 className="text-[24px] font-[700]">{teamData.name}</h3>
@@ -129,10 +142,8 @@ const CreateTeam = () => {
             >
               <img
                 src={player.profile}
-                className="-z-10 rounded-full object-cover"
+                className="w-[200px] h-[200px] -z-10 rounded-full object-cover"
                 alt="Player Image"
-                width="200px"
-                height="200px"
               />
             </label>
             <input
@@ -204,9 +215,7 @@ const CreateTeam = () => {
                       <img
                         src={value.profile}
                         alt="player-img"
-                        className="rounded-full"
-                        width="38px"
-                        height="38px"
+                        className="rounded-full w-[38px] h-[38px] object-cover"
                       />
                     </div>
                     <div>

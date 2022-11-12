@@ -35,6 +35,9 @@ const teamStore = (set: any) => ({
         mascot: "",
       },
     }));
+    set(() => ({
+      players: [],
+    }));
   },
 
   addPlayer: (payload: any) => {

@@ -4,7 +4,7 @@ import "./core.css";
 
 const Pagination = () => {
   return (
-    <div className="absolute bottom-0 bg-[#f1f5f8] p-[32px] w-full pagination">
+    <div className="absolute left-0 bottom-0 bg-[#f1f5f8] p-[32px] w-full pagination">
       <div className="border-t-[1px] justify-between pt-[32px] flex items-center w-full justify-betweenr">
         <div>
           <button className="bg-white px-[14px] rounded-[8px] flex items-center justify-between space-x-[12px] py-[8px]">

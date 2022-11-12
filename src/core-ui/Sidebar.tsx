@@ -31,7 +31,7 @@ const Sidebar = () => {
           <div className="flex items-center space-x-[16px] hover:text-[#94DD26]">
             <MdSubscriptions size={16} />
             <p className="text-[16px] font-[500] leading-[22.4px]">
-              Manage Videos
+              Screen Manager
             </p>
           </div>
           <div className="flex items-center space-x-[16px]">
