@@ -34,10 +34,11 @@ const CommunityDashboard = () => {
       <Utility />
       <CommunityDashboradHeader />
       <div className="space-y-[12px]">
-        {communities.map((item, index) => {
+        {communities.map((item: any, index: number) => {
           return (
             <CommunityCard
               key={index}
+              id={item._id}
               name={item.name}
               category={item.category}
               image={item.image}

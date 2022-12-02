@@ -3,6 +3,7 @@ import { MdMoreHoriz } from "react-icons/md";
 import icon from "../../../../assets/team.png";
 
 interface CommunityCardType {
+  id: string;
   name: string;
   category: string;
   image: string;
@@ -10,6 +11,7 @@ interface CommunityCardType {
 }
 
 const CommunityCard = ({
+  id,
   name,
   category,
   image,
@@ -27,6 +29,7 @@ const CommunityCard = ({
           alt="tournament"
         />
         <p>{name}</p>
+        <p>{id}</p>
       </div>
       <div className="w-1/12 text-[#A6A6A6]">{category} </div>
       <div className="w-1/12 text-[#A6A6A6]">16 Members</div>

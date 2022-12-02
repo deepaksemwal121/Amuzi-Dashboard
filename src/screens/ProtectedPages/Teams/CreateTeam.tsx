@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import team from "../../../assets/team.png";
 import { HiArrowCircleRight } from "react-icons/hi";
-import useTeamStore from "../../../context/store";
+import useTeamStore from "../../../context/teamstore";
 import TeamData from "../../../types/TeamInterface";
 import axios from "axios";
 import { toast } from "react-toastify";

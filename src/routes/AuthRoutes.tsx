@@ -9,6 +9,7 @@ import CreateTeam from "../screens/ProtectedPages/Teams/CreateTeam";
 import Teams from "../screens/ProtectedPages/Teams/Teams";
 import TeamsDashboard from "../screens/ProtectedPages/Teams/TeamsDashboard";
 import Tournaments from "../screens/ProtectedPages/Tournaments/Tournaments";
+import TemporaryData from "../screens/ProtectedPages/Xclusive/TemporaryData";
 
 const AuthRoutes = () => {
   return (
@@ -23,9 +24,12 @@ const AuthRoutes = () => {
           <Route element={<Community />} path="community">
             <Route element={<CommunityDashboard />} path="all" />
           </Route>
-          <Route element={<ScreenController />} path="screenController">
-            <Route element={<ManagePlaylists />} path="managePlaylist" />
-          </Route>
+          <Route element={<ScreenController />} path="screenController" />
+          <Route
+            element={<ManagePlaylists />}
+            path="screenController/managePlaylist/:screenID"
+          />
+          <Route element={<TemporaryData />} path="xclusive"></Route>
         </Route>
       </Routes>
     </BrowserRouter>

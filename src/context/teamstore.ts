@@ -58,7 +58,7 @@ const teamStore = (set: any) => ({
 const useTeamStore = create(
   devtools(
     persist(teamStore, {
-      name: "courses",
+      name: "teams",
     }),
   ),
 );

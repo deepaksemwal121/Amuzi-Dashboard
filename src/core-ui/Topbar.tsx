@@ -12,9 +12,6 @@ const Topbar = () => {
           Entertainment
         </div>
       </div>
-      <div className="">
-        <Modal />
-      </div>
     </div>
   );
 };
